@@ -20,3 +20,25 @@ void loop() {
   digitalWrite(LED_BUILTIN, LOW);
   delay(1000);
 }
+
+## Story 2: Alternate LED Flash
+The task was to get two external LEDs (Red and Green) to flash alternately every 1 second (1000ms). This **Was** very tricky for me but i eventually learnt it
+
+### Code for Story 2
+```cpp
+#define ledRed 12
+#define ledGreen 13
+
+void setup() {
+  pinMode(ledRed, OUTPUT);
+  pinMode(ledGreen, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(ledRed, 1);
+  digitalWrite(ledGreen, 0);
+  delay(1000); // Red ON, Green OFF
+  digitalWrite(ledRed, 0);
+  digitalWrite(ledGreen, 1);
+  delay(1000); // Red OFF, Green ON
+}
