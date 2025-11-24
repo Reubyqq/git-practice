@@ -7,9 +7,9 @@ I found the coding part *easy* once I adjusted to it. The *tricky* sector was se
 
 ### Code for Story 1: Onboard LED Flash
 
-The code below *should* successfully meets the criteria of flashing the onboard LED on and off for 1 second.
+The code below successfully meets the criteria of flashing the onboard LED on and off for 1 second.
 
-
+```cpp
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
 }
@@ -18,18 +18,17 @@ void loop() {
   digitalWrite(LED_BUILTIN, HIGH);
   delay(1000); 
   digitalWrite(LED_BUILTIN, LOW);
-  delay(1000);//
+  delay(1000);
 }
+```
+**Story 2: Alternate LED Flash**
+The task was to get two external LEDs (Red and Green) to flash alternately every 1 second (1000ms). This Was very tricky for me but i eventually learnt it
 
-
-## Story 2: Alternate LED Flash
-The task was to get two external LEDs (Red and Green) to flash alternately every 1 second (1000ms). This **Was** very tricky for me but i eventually learnt it
-
-### Code for Story 2
+**Code for Story 2**
 
 #define ledRed 12
 #define ledGreen 13
-
+```
 void setup() {
   pinMode(ledRed, OUTPUT);
   pinMode(ledGreen, OUTPUT);
