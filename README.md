@@ -3,13 +3,13 @@ just a practice
 Hello Mission to Mars!, how is your day/night?
 
 ## Story 1: Building the Rover
-I found the coding part **easy** once I adjusted to it. The **tricky** sector was setting up Git, but I am very glad I learned it.
+I found the coding part *easy* once I adjusted to it. The *tricky* sector was setting up Git, but I am very glad I learned it.
 
 ### Code for Story 1: Onboard LED Flash
 
-The code below **should** successfully meets the criteria of flashing the onboard LED on and off for 1 second.
+The code below *should* successfully meets the criteria of flashing the onboard LED on and off for 1 second.
 
-```cpp
+cpp
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
 }
@@ -22,12 +22,11 @@ void loop() {
 }
 
 
-
 ## Story 2: Alternate LED Flash
 The task was to get two external LEDs (Red and Green) to flash alternately every 1 second (1000ms). This **Was** very tricky for me but i eventually learnt it
 
 ### Code for Story 2
-```cpp
+cpp
 #define ledRed 12
 #define ledGreen 13
 
