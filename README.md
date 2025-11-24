@@ -7,7 +7,7 @@ I found the coding part **easy** once I adjusted to it. The **tricky** sector wa
 
 ### Code for Story 1: Onboard LED Flash
 
-The code below successfully meets the criteria of flashing the onboard LED on and off for 1 second.
+The code below **should** successfully meets the criteria of flashing the onboard LED on and off for 1 second.
 
 ```cpp
 void setup() {
