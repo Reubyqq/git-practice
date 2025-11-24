@@ -9,7 +9,7 @@ I found the coding part *easy* once I adjusted to it. The *tricky* sector was se
 
 The code below *should* successfully meets the criteria of flashing the onboard LED on and off for 1 second.
 
-'''cpp
+
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
 }
@@ -26,7 +26,7 @@ void loop() {
 The task was to get two external LEDs (Red and Green) to flash alternately every 1 second (1000ms). This **Was** very tricky for me but i eventually learnt it
 
 ### Code for Story 2
-'''cpp
+
 #define ledRed 12
 #define ledGreen 13
 
