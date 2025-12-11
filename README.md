@@ -28,7 +28,7 @@ The task was to get two external LEDs (Red and Green) to flash alternately every
 
 #define ledRed 12
 #define ledGreen 13
-```
+```cpp
 void setup() {
   pinMode(ledRed, OUTPUT);
   pinMode(ledGreen, OUTPUT);
