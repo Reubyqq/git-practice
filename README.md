@@ -34,10 +34,10 @@ void setup() {
 void loop() {
   digitalWrite(ledRed, 1);
   digitalWrite(ledGreen, 0);
-  delay(1000); // Red ON, Green OFF
+  delay(1000); 
   digitalWrite(ledRed, 0);
   digitalWrite(ledGreen, 1);
-  delay(1000); // Red OFF, Green ON
+  delay(1000); 
 }
 ```
 **Story 3: Forward, stop, reverse sequence**
