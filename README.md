@@ -110,7 +110,7 @@ void loop(){
   a(rr, 0);
 }
 ```
-**Story 5: **
+**Story 5:**
 i have tried altering the code to make the rover snake along as such
 **Code for Story 5**
 
