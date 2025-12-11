@@ -68,7 +68,9 @@ void loop(){
 ```
 **Story 4: Functions**
 **Code for Story 4**
-```cppint
+
+```cpp
+int
  rl=13, gl=12, yl=11, yr=9, rr=8, gr=7;
 
 void a(int p, int s){
