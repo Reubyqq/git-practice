@@ -66,3 +66,46 @@ void loop(){
   digitalWrite(rl,0);digitalWrite(rr,0);
 }
 ```
+**Story 4: Functions**
+**Code for Story 4**
+```cppint
+ rl=13, gl=12, yl=11, yr=9, rr=8, gr=7;
+
+void a(int p, int s){
+  digitalWrite(p, s);
+}
+
+void b(long t){
+  delay(t);
+}
+
+void setup(){
+  pinMode(rl, 1);
+  pinMode(gl, 1);
+  pinMode(yl, 1);
+  pinMode(yr, 1);
+  pinMode(rr, 1);
+  pinMode(gr, 1);
+}
+
+void loop(){
+  a(gl, 1);
+  a(gr, 1);
+  b(5000);
+  a(gl, 0);
+  a(gr, 0);
+
+  a(yl, 1);
+  a(yr, 1);
+  b(1000);
+  a(yl, 0);
+  a(yr, 0);
+
+  a(rl, 1);
+  a(rr, 1);
+  b(2000);
+  a(rl, 0);
+  a(rr, 0);
+}
+
+
