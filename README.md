@@ -109,5 +109,27 @@ void loop(){
   a(rl, 0);
   a(rr, 0);
 }
+```
+**Story 5: **
+i have tried altering the code to make the rover snake along as such
+**Code for Story 5**
 
+```cpp
+int a=13,b=12,c=11,d=9,e=8,f=7;
+
+void g(int h,int i){digitalWrite(h,i);}
+void j(long k){delay(k);}
+
+void setup(){
+pinMode(a,1);pinMode(b,1);pinMode(c,1);pinMode(d,1);pinMode(e,1);pinMode(f,1);
+}
+
+void loop(){
+g(b,1);g(f,1);j(2000);g(b,0);g(f,0);
+g(c,1);g(d,1);j(2000);g(c,0);g(d,0);
+g(a,1);g(e,1);j(2000);g(a,0);g(e,0);
+g(c,1);g(d,1);j(2000);g(c,0);g(d,0);
+g(a,1);g(e,1);j(2000);g(a,0);g(e,0);
+}
+```
 
