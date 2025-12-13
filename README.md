@@ -132,4 +132,65 @@ g(c,1);g(d,1);j(2000);g(c,0);g(d,0);
 g(a,1);g(e,1);j(2000);g(a,0);g(e,0);
 }
 ```
+**Story 6:**
+this code succesfully counts the pushes of the buttons aswell as stops the process once it reaches 10 (i have changed the numbers because im not willing to press over 400 times)
+**Code for Story 6**
+
+```cpp
+const int LEFT_FEEDBACK = 2;
+const int RIGHT_FEEDBACK = 3;
+const int LEFT_MOTOR = 4;
+const int RIGHT_MOTOR = 5;
+
+
+volatile int leftCounter = 0;
+volatile int rightCounter = 0;
+
+void setup() {
+  Serial.begin(115200);
+
+  
+  pinMode(LEFT_MOTOR, OUTPUT);
+  pinMode(RIGHT_MOTOR, OUTPUT);
+
+  
+  digitalWrite(LEFT_MOTOR, HIGH);
+  digitalWrite(RIGHT_MOTOR, HIGH);
+
+ 
+  attachInterrupt(digitalPinToInterrupt(LEFT_FEEDBACK), LeftMotorISR, RISING);
+  attachInterrupt(digitalPinToInterrupt(RIGHT_FEEDBACK), RightMotorISR, RISING);
+}
+
+void loop() {
+  
+  Serial.print("Left: ");
+  Serial.println(leftCounter);
+  Serial.print("Right: ");
+  Serial.println(rightCounter);
+
+  
+  if (leftCounter >= 10 || rightCounter >= 10) {
+    
+   
+    digitalWrite(LEFT_MOTOR, LOW);
+    digitalWrite(RIGHT_MOTOR, LOW);
+    
+    Serial.println("Target reached. Stopping.");
+    
+    
+    exit(0);
+  }
+}
+
+
+void LeftMotorISR() {
+  leftCounter++;
+}
+
+void RightMotorISR() {
+  rightCounter++;
+}
+
+
 
