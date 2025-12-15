@@ -191,6 +191,68 @@ void LeftMotorISR() {
 void RightMotorISR() {
   rightCounter++;
 }
+```
+**Story 7:**
+i have done as story 7 has instructed me and i have used the codes provided in Arduino IDE
+**Code for Story 7**
 
+```cpp
+#include <NewPing.h> 
+
+#define TRIGGER_PIN 4
+#define ECHO_PIN 5
+#define MAX_DISTANCE 200 
+NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
+
+int LF=5, LB=6, RF=9, RB=10; 
+
+void setup() {
+  pinMode(LF, OUTPUT); 
+  pinMode(LB, OUTPUT);
+  pinMode(RF, OUTPUT); 
+  pinMode(RB, OUTPUT); 
+  
+  Serial.begin(9600); 
+}
+
+void loop() {
+ 
+  digitalWrite(LF, HIGH); digitalWrite(RF, HIGH);
+  delay(2000);
+
+ 
+  for (int i = 0; i < 4; i++) {
+    // Drive side
+    digitalWrite(LF, HIGH); digitalWrite(RF, HIGH);
+    delay(1500);
+
+    
+    digitalWrite(LB, HIGH); digitalWrite(RF, HIGH); 
+    delay(850);
+  }
+
+  
+  for (int i = 0; i < 4; i++) {
+    // Drive side
+    digitalWrite(LF, HIGH); digitalWrite(RF, HIGH);
+    delay(1500);
+
+    // Turn Right (850 milliseconds)
+    digitalWrite(LF, HIGH); digitalWrite(RB, HIGH); 
+    delay(850);
+  }
+
+  
+  digitalWrite(LB, HIGH); digitalWrite(RB, HIGH);
+  delay(2000);
+  
+  
+  digitalWrite(LF, LOW); digitalWrite(RF, LOW); 
+  digitalWrite(LB, LOW); digitalWrite(RB, LOW);
+
+ 
+  while(true); 
+}
+```
 
 
