@@ -222,7 +222,7 @@ void loop() {
 
  
   for (int i = 0; i < 4; i++) {
-    // Drive side
+    
     digitalWrite(LF, HIGH); digitalWrite(RF, HIGH);
     delay(1500);
 
@@ -233,11 +233,11 @@ void loop() {
 
   
   for (int i = 0; i < 4; i++) {
-    // Drive side
+   
     digitalWrite(LF, HIGH); digitalWrite(RF, HIGH);
     delay(1500);
 
-    // Turn Right (850 milliseconds)
+   
     digitalWrite(LF, HIGH); digitalWrite(RB, HIGH); 
     delay(850);
   }
