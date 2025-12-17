@@ -192,7 +192,7 @@ void RightMotorISR() {
 }
 ```
 **Story 7:**
-i have done as story 7 has instructed me and i have used the codes provided in Arduino IDE, i found Arduino surprisingly straight forward
+i have done as story 7 has instructed me and i have used the codes provided in Arduino IDE, i found Arduino surprisingly straight forward except the way it outputs did confuse me
 **Code for Story 7**
 
 ```cpp
@@ -252,6 +252,41 @@ void loop() {
  
   while(true); 
 }
+```
+**Story 8:**
+i have used what ive learnt and applied this to the instructions, i am *fairly* confident i have succeeded in this 
+**Code for Story 8**
+
+```cpp
+int trigPin = 9;
+int echoPin = 10;
+int leftMotorForward = 3;
+int leftMotorBackward = 4;
+int rightMotorForward = 5;
+int rightMotorBackward = 6;
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(leftMotorForward, OUTPUT);
+  pinMode(leftMotorBackward, OUTPUT);
+  pinMode(rightMotorForward, OUTPUT);
+  pinMode(rightMotorBackward, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  long duration;
+  int distance;
+
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration * 0.034 / 2;
 ```
 
 
