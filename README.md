@@ -41,6 +41,7 @@ void loop() {
 ```
 **Story 3: Forward, stop, reverse sequence**
 The task was to get lights to symbolize a rover moving forward(5), stop(1), and reverse(2). This looked complicated but i believe story 2 helped improve my problem solving skills
+
 **Code for Story 3**
 
 ```cpp
@@ -66,6 +67,7 @@ void loop(){
 }
 ```
 **Story 4: Functions**
+
 **Code for Story 4**
 
 ```cpp
@@ -111,6 +113,7 @@ void loop(){
 ```
 **Story 5:**
 i have tried altering the code to make the rover snake along as such, this was *tricky* becasue i had to get my head around the process
+
 **Code for Story 5**
 
 ```cpp
@@ -133,6 +136,7 @@ g(a,1);g(e,1);j(2000);g(a,0);g(e,0);
 ```
 **Story 6:**
 this code succesfully counts the pushes of the buttons aswell as stops the process once it reaches 10 (i have changed the numbers because im *not* willing to press over 400 times)
+
 **Code for Story 6**
 
 ```cpp
@@ -193,6 +197,7 @@ void RightMotorISR() {
 ```
 **Story 7:**
 i have done as story 7 has instructed me and i have used the codes provided in Arduino IDE, i found Arduino surprisingly straight forward except the way it outputs did confuse me
+
 **Code for Story 7**
 
 ```cpp
