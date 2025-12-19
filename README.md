@@ -259,7 +259,7 @@ void loop() {
 }
 ```
 **Story 8:**
-i have used what ive learnt and applied this to the instructions, i am *fairly* confident i have succeeded in this 
+i have used what ive learnt and applied this to the instructions, i am *fairly* confident i have succeeded in this with external research i have done on c++ in my own time
 
 **Code for Story 8**
 
@@ -294,5 +294,74 @@ void loop() {
   duration = pulseIn(echoPin, HIGH);
   distance = duration * 0.034 / 2;
 ```
+**story 9:** 
+this one was for some reason the *hardest* so far!, but i believe i got it done with external research on c++
+
+**code for story 9**
+
+```cpp
+int trigPin = 9;
+int echoPin = 10;
+int leftMotorForward = 3;
+int leftMotorBackward = 4;
+int rightMotorForward = 5;
+int rightMotorBackward = 6;
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(leftMotorForward, OUTPUT);
+  pinMode(leftMotorBackward, OUTPUT);
+  pinMode(rightMotorForward, OUTPUT);
+  pinMode(rightMotorBackward, OUTPUT);
+}
+
+void loop() {
+  long duration;
+  int distance;
+
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration * 0.034 / 2;
+
+  if (distance > 12) {
+    digitalWrite(leftMotorForward, LOW);
+    digitalWrite(leftMotorBackward, LOW);
+    digitalWrite(rightMotorForward, LOW);
+    digitalWrite(rightMotorBackward, LOW);
+    
+    
+    digitalWrite(leftMotorForward, LOW);
+    digitalWrite(leftMotorBackward, HIGH);
+    digitalWrite(rightMotorForward, LOW);
+    digitalWrite(rightMotorBackward, HIGH);
+    delay(500);
+
+   
+    digitalWrite(leftMotorForward, LOW);
+    digitalWrite(leftMotorBackward, LOW);
+    digitalWrite(rightMotorForward, LOW);
+    digitalWrite(rightMotorBackward, LOW);
+    
+    while(true) {
+     
+    }
+
+  } else {
+    digitalWrite(leftMotorForward, HIGH);
+    digitalWrite(leftMotorBackward, LOW);
+    digitalWrite(rightMotorForward, HIGH);
+    digitalWrite(rightMotorBackward, LOW);
+  }
+}
+```
+
+
+
 
 
