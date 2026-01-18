@@ -20,7 +20,7 @@ void loop() {
 }
 ```
 **Story 2: Alternate LED Flash**
-The task was to get two external LEDs (Red and Green) to flash alternately every 1 second (1000ms). This Was very tricky for me but i eventually learnt it
+The task was to get two external LEDs (Red and Green) to flash alternately every 1 second (1000ms). This Was very tricky for me because i couldnt get specific lights to go on and off accordingly but eventually i eventually learnt it
 
 **Code for Story 2**
 
@@ -112,7 +112,7 @@ void loop(){
 }
 ```
 **Story 5:**
-i have tried altering the code to make the rover snake along as such, this was *tricky* becasue i had to get my head around the process
+i have tried altering the code to make the rover snake along as such, this was *tricky* becasue i had to get my head around the process of the movement and i definitely had to use google to help me get around on how to accomplish this in a way that made sense to me
 
 **Code for Story 5**
 
